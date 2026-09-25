@@ -1,0 +1,16 @@
+import web
+
+let app = web()
+
+let users = app.db.collection("users")
+
+let alex = users.insert({
+    "name": "Alex",
+    "age": 15
+})
+
+say(alex)
+
+say(users.find())
+
+app.run(8080)

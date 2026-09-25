@@ -1,0 +1,23 @@
+import web
+
+let app = web()
+
+fn created(request) {
+
+    return request.response.json({
+        "message": "User created"
+    }, 201)
+}
+
+fn missing(request) {
+
+    return request.response.json({
+        "error": "User not found"
+    }, 404)
+}
+
+app.post("/users", created)
+
+app.get("/missing", missing)
+
+app.run(8080)

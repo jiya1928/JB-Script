@@ -1,0 +1,18 @@
+import web
+
+let app = web()
+
+fn created(request) {
+    return {
+        "message": "User created"
+    }
+}
+
+fn not_found(request) {
+    return "User not found"
+}
+
+app.post("/users", created)
+app.get("/missing", not_found)
+
+app.run(8080)

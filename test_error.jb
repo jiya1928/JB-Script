@@ -1,0 +1,7 @@
+try {
+    throw ValueError("Invalid age")
+} catch error {
+    say(error)
+    say(error.type)
+    say(error.message)
+}

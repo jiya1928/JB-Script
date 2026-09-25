@@ -1,0 +1,37 @@
+{
+  "users": {
+    "records": {
+      "1": {
+        "name": "Alex",
+        "age": 15,
+        "id": 1
+      },
+      "2": {
+        "name": "Sam",
+        "age": 16,
+        "id": 2
+      },
+      "3": {
+        "name": "John",
+        "age": 15,
+        "id": 3
+      },
+      "4": {
+        "name": "Alex",
+        "age": 15,
+        "id": 4
+      },
+      "5": {
+        "name": "Sam",
+        "age": 18,
+        "id": 5
+      },
+      "6": {
+        "name": "John",
+        "age": 12,
+        "id": 6
+      }
+    },
+    "next_id": 7
+  }
+}

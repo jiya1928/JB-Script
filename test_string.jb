@@ -1,0 +1,6 @@
+import string
+
+say(string.upper("hello"))
+say(string.lower("HELLO"))
+say(string.trim("   JB Language   "))
+say(string.length("hello"))

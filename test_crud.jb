@@ -1,0 +1,85 @@
+import web
+
+let app = web()
+
+let users = app.db.collection("users")
+
+
+fn create_user(request) {
+    let user = users.insert(request.json)
+
+    return request.response.json(
+        user,
+        201
+    )
+}
+
+
+fn get_users(request) {
+    return request.response.json(
+        users.find()
+    )
+}
+
+
+fn get_user(request) {
+    let user = users.find_one(
+        request.params.id
+    )
+
+    if user == null {
+        return request.response.json({
+            "error": "User not found"
+        }, 404)
+    }
+
+    return request.response.json(user)
+}
+
+
+fn update_user(request) {
+    let user = users.update(
+        request.params.id,
+        request.json
+    )
+
+    if user == null {
+        return request.response.json({
+            "error": "User not found"
+        }, 404)
+    }
+
+    return request.response.json(user)
+}
+
+
+fn delete_user(request) {
+    let user = users.delete(
+        request.params.id
+    )
+
+    if user == null {
+        return request.response.json({
+            "error": "User not found"
+        }, 404)
+    }
+
+    return request.response.json({
+        "message": "User deleted",
+        "user": user
+    })
+}
+
+
+app.post("/users", create_user)
+
+app.get("/users", get_users)
+
+app.get("/users/:id", get_user)
+
+app.put("/users/:id", update_user)
+
+app.delete("/users/:id", delete_user)
+
+
+app.run(8080)

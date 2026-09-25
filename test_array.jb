@@ -1,0 +1,10 @@
+import array
+
+let numbers = [10, 20, 30, 40]
+
+say(array.first(numbers))
+say(array.last(numbers))
+say(array.length(numbers))
+say(array.contains(numbers, 30))
+say(array.contains(numbers, 99))
+say(array.reverse(numbers))

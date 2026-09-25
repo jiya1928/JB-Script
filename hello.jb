@@ -1,0 +1,8 @@
+let total = 0
+
+for i in range(1, 6) {
+    say(i)
+    total = total + i
+}
+
+say(total)

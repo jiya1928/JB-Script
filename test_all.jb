@@ -1,0 +1,48 @@
+# VARIABLES
+let x = 10
+let y = 20
+
+say(x)
+say(y)
+say(x + y)
+
+# BOOLEAN
+let a = true
+let b = false
+
+say(a)
+say(b)
+
+# ARRAY
+let numbers = [10, 20, 30]
+
+say(numbers[0])
+say(numbers[1])
+say(numbers[2])
+
+# IF
+if x < y {
+    say("IF WORKS")
+} otherwise {
+    say("IF FAILED")
+}
+
+# FUNCTION
+fn add(a, b) {
+    return a + b
+}
+
+say(add(5, 7))
+
+# WHILE
+let i = 0
+
+while i < 3 {
+    say(i)
+    i = i + 1
+}
+
+# FOR
+for item in numbers {
+    say(item)
+}

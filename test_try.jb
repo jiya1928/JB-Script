@@ -1,0 +1,6 @@
+try {
+    throw "Something went wrong"
+} catch error {
+    say("Caught:")
+    say(error)
+}

@@ -1,0 +1,15 @@
+fn upper(value) {
+    return value.upper()
+}
+
+fn lower(value) {
+    return value.lower()
+}
+
+fn trim(value) {
+    return value.trim()
+}
+
+fn length(value) {
+    return len(value)
+}

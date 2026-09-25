@@ -1,0 +1,6 @@
+try {
+    let x = 10
+    say(x)
+} catch error {
+    say("This should not run")
+}

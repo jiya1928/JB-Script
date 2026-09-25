@@ -1,0 +1,6 @@
+let x = 10
+let y = 20
+
+say(x)
+say(y)
+say(x + y)

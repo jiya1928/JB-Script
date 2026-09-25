@@ -1,0 +1,5 @@
+import math
+
+say(math.add(10, 20))
+say(math.subtract(20, 5))
+say(math.multiply(6, 7))
